@@ -5,12 +5,12 @@
 class AtunDev < Formula
   desc "atun.io is a simple SSM/SSH tunnel manager"
   homepage "https://github.com/AutomationD/atun"
-  version "0.0.0-dev"
+  version "0.0.0"
   license "Apache 2.0"
   depends_on :macos
 
-  url "https://github.com/AutomationD/atun/releases/download/0.0.0-dev/atun_0.0.0-dev_darwin_amd64.tar.gz"
-  sha256 "3c1bdf901d2e30e3b08ce3d5bc804ee829b1c08cb1ca356ebd932f05d4e022e3"
+  url "https://github.com/AutomationD/atun/releases/download/0.0.0/atun_0.0.0_darwin_amd64.tar.gz"
+  sha256 "f071a87ddd6da087cde2729faa71bd11256e733598fd5664f92c7413600d313b"
 
   def install
     bin.install "atun"
@@ -27,7 +27,7 @@ class AtunDev < Formula
   end
 
   conflicts_with "atun"
-  conflicts_with "atun@0.0.0-dev"
+  conflicts_with "atun@0.0.0"
 
   test do
     system "#{bin}/atun --version"
