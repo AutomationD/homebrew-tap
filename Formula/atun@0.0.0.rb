@@ -7,22 +7,46 @@ class AtunAT000 < Formula
   homepage "https://github.com/AutomationD/atun"
   version "0.0.0"
   license "Apache 2.0"
-  depends_on :macos
 
-  url "https://github.com/AutomationD/atun/releases/download/0.0.0/atun_0.0.0_darwin_amd64.tar.gz"
-  sha256 "9778ee1c5210bfd2bf5cc067466940a72161f03ff5b8295ff72b703d8e74329a"
+  on_macos do
+    on_intel do
+      url "https://github.com/AutomationD/atun/releases/download/0.0.0/atun_0.0.0_darwin_amd64.tar.gz"
+      sha256 "11862f4f4ae75656f94da9a790c593bb92aa622eed46f9e70c18dd66d8b9fdfd"
 
-  def install
-    bin.install "atun"
+      def install
+        bin.install "atun"
+      end
+    end
+    on_arm do
+      url "https://github.com/AutomationD/atun/releases/download/0.0.0/atun_0.0.0_darwin_arm64.tar.gz"
+      sha256 "0cd427b5bca35e68ad64631cb06e47969be901adf09b170bc688604f101174d8"
+
+      def install
+        bin.install "atun"
+      end
+    end
   end
 
-  on_arm do
-    def caveats
-      <<~EOS
-        The darwin_arm64 architecture is not supported for the AtunAT000
-        formula at this time. The darwin_amd64 binary may work in compatibility
-        mode, but it might not be fully supported.
-      EOS
+  on_linux do
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/AutomationD/atun/releases/download/0.0.0/atun_0.0.0_linux_amd64.tar.gz"
+        sha256 "79173155d40ab8d1124d1acd96e7784123775de0e907f7926eda90274d575df1"
+
+        def install
+          bin.install "atun"
+        end
+      end
+    end
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/AutomationD/atun/releases/download/0.0.0/atun_0.0.0_linux_arm64.tar.gz"
+        sha256 "138c99747cd2c775306d15379cfff3f5caa73450377604e07c5f625e89a54962"
+
+        def install
+          bin.install "atun"
+        end
+      end
     end
   end
 
