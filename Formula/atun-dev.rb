@@ -10,7 +10,7 @@ class AtunDev < Formula
   depends_on :macos
 
   url "https://github.com/AutomationD/atun/releases/download/0.0.0-dev/atun_0.0.0-dev_darwin_amd64.tar.gz"
-  sha256 "bf679219688ae3cb869ac8df83d2c5b7a0a6df15f5a033bfc51a97ef7ce706e0"
+  sha256 "3c1bdf901d2e30e3b08ce3d5bc804ee829b1c08cb1ca356ebd932f05d4e022e3"
 
   def install
     bin.install "atun"
