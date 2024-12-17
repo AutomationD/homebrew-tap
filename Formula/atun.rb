@@ -5,21 +5,21 @@
 class Atun < Formula
   desc "atun.io is a simple SSM/SSH tunnel manager"
   homepage "https://github.com/AutomationD/atun"
-  version "0.0.0"
+  version "0.3.2"
   license "Apache 2.0"
 
   on_macos do
-    on_intel do
-      url "https://github.com/AutomationD/atun/releases/download/0.0.0/atun_0.0.0_darwin_amd64.tar.gz"
-      sha256 "f2b9dc0dddd69d373eff35d9564e94e6f800dbb37c36c75f78906f9b33caf192"
+    if Hardware::CPU.intel?
+      url "https://github.com/AutomationD/atun/releases/download/0.3.2/atun_0.3.2_darwin_amd64.tar.gz"
+      sha256 "8008c3e0feb4731b7a61c5a4dd3d5ce5438807ff8b5d425f00b39f35af8f51b2"
 
       def install
         bin.install "atun"
       end
     end
-    on_arm do
-      url "https://github.com/AutomationD/atun/releases/download/0.0.0/atun_0.0.0_darwin_arm64.tar.gz"
-      sha256 "12c62c4d2141fec97e7c2efd1140c6785456faa769fd947d8dfab1163fc7e073"
+    if Hardware::CPU.arm?
+      url "https://github.com/AutomationD/atun/releases/download/0.3.2/atun_0.3.2_darwin_arm64.tar.gz"
+      sha256 "da7b230ac47be70a6de42dfe2418e942a32a1341b0b3fecdc6afdbed3a0e724f"
 
       def install
         bin.install "atun"
@@ -28,20 +28,20 @@ class Atun < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/AutomationD/atun/releases/download/0.0.0/atun_0.0.0_linux_amd64.tar.gz"
-        sha256 "7254b61f735c9ba9dace6a2de4adfcad490a6ba5ce1a3586ec632fb7a667f3ed"
+        url "https://github.com/AutomationD/atun/releases/download/0.3.2/atun_0.3.2_linux_amd64.tar.gz"
+        sha256 "401646af197c7bc753178fea45bd322f893a6d87bbcf79c6c1df7b49bd17fbc3"
 
         def install
           bin.install "atun"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/AutomationD/atun/releases/download/0.0.0/atun_0.0.0_linux_arm64.tar.gz"
-        sha256 "2a88905a0f8b1a794be6ad5fd73c912b49dd4eb8a954d5a172c468bc5a414142"
+        url "https://github.com/AutomationD/atun/releases/download/0.3.2/atun_0.3.2_linux_arm64.tar.gz"
+        sha256 "965ca89b14da89c56499dcab8b1a390146fe6602d218f2d5f30959c2b25c283e"
 
         def install
           bin.install "atun"
@@ -51,7 +51,7 @@ class Atun < Formula
   end
 
   conflicts_with "atun-dev"
-  conflicts_with "atun-dev@0.0.0"
+  conflicts_with "atun-dev@0.3.2"
 
   test do
     system "#{bin}/atun --version"
