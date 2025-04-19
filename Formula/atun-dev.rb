@@ -11,7 +11,7 @@ class AtunDev < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/AutomationD/atun/releases/download/v0.0.0/atun-darwin-amd64.tar.gz"
-      sha256 "fb01b3fb38975c4c92a429a9870e49d4b6023dc23f31e4993b30e63a2f8ed699"
+      sha256 "c827a3e35a49526e1f0013c4e39fddab46fe199157fb9bf504b603ba99fd4c93"
 
       def install
         bin.install "atun"
@@ -19,7 +19,7 @@ class AtunDev < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/AutomationD/atun/releases/download/v0.0.0/atun-darwin-arm64.tar.gz"
-      sha256 "3d8f88273e9cdf11876648e93662f110f82df230fb7d19dfaabd5d730df07285"
+      sha256 "e482f5b454f5a56500827cd0bcce0c49aa18bcc7bf17b520fe49533a69e10e49"
 
       def install
         bin.install "atun"
@@ -31,7 +31,7 @@ class AtunDev < Formula
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/AutomationD/atun/releases/download/v0.0.0/atun-linux-amd64.tar.gz"
-        sha256 "3f4418d1646006cb97b007d5ecdfef9df569ffad8afbb52f69ea6527f34c605f"
+        sha256 "5dd94dd352f87506d1e3273f80d06f5a115704e944ab6e5c19e3a1734fd9fe65"
 
         def install
           bin.install "atun"
@@ -41,7 +41,7 @@ class AtunDev < Formula
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/AutomationD/atun/releases/download/v0.0.0/atun-linux-arm64.tar.gz"
-        sha256 "ade3cad810a01248b6214c762b1a94fc582d7060e47c986bc32eea1dfe6ff955"
+        sha256 "467883e07ca287d0677c447052c60c3bd3bfdd933fd04ce3983a43676183d20c"
 
         def install
           bin.install "atun"
