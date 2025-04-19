@@ -10,16 +10,16 @@ class AtunDevAT000 < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/AutomationD/atun/releases/download/v0.0.0/atun-glibc-darwin-amd64.tar.gz"
-      sha256 "ab9a67466cdb20a5c0f514d67fd1bed1d90826e562e1a77e5a870c61df2de984"
+      url "https://github.com/AutomationD/atun/releases/download/v0.0.0/atun-darwin-amd64.tar.gz"
+      sha256 "ce454693781dbc13c1d4c2049c33fad797fe946ea7e31d1da03d2e5641d1c5c4"
 
       def install
         bin.install "atun"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/AutomationD/atun/releases/download/v0.0.0/atun-glibc-darwin-arm64.tar.gz"
-      sha256 "a9113f14f13138dd817a3dae78e1a20113d919e7686db6757fbf723750055136"
+      url "https://github.com/AutomationD/atun/releases/download/v0.0.0/atun-darwin-arm64.tar.gz"
+      sha256 "dadc8b8284ab92771925b7864f23cab6c273aac0a378ff14a15fe613dd492464"
 
       def install
         bin.install "atun"
@@ -30,8 +30,8 @@ class AtunDevAT000 < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/AutomationD/atun/releases/download/v0.0.0/atun-glibc-linux-amd64.tar.gz"
-        sha256 "e22ce2439ce9f274c57a1598af42ca80a9c926ecd786a9f81b6fe9a5f174367b"
+        url "https://github.com/AutomationD/atun/releases/download/v0.0.0/atun-linux-amd64.tar.gz"
+        sha256 "db9da140ad2c7d7720ed5a79468b00b3c9755d3fc4e2e6a741764c6bbd0fa2c9"
 
         def install
           bin.install "atun"
@@ -40,8 +40,8 @@ class AtunDevAT000 < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/AutomationD/atun/releases/download/v0.0.0/atun-glibc-linux-arm64.tar.gz"
-        sha256 "ab3a6375ce6e2a5345c0e376d22889dba783a32ce924fe496d09243a2ceaf231"
+        url "https://github.com/AutomationD/atun/releases/download/v0.0.0/atun-linux-arm64.tar.gz"
+        sha256 "69b55f3e086b415d8f18b55beef51bc729da4491d8129afef679a55a0fa5a21f"
 
         def install
           bin.install "atun"
