@@ -10,16 +10,16 @@ class AtunDev < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/AutomationD/atun/releases/download/v0.0.0/atun-darwin-amd64.tar.gz"
-      sha256 "02390d3c7e41d9cbb92456af3cd6c31f2c83124ee5f3720fbe78dad5005048db"
+      url "https://github.com/AutomationD/atun/releases/download/v0.0.0/atun-glibc-darwin-amd64.tar.gz"
+      sha256 "ab9a67466cdb20a5c0f514d67fd1bed1d90826e562e1a77e5a870c61df2de984"
 
       def install
         bin.install "atun"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/AutomationD/atun/releases/download/v0.0.0/atun-darwin-arm64.tar.gz"
-      sha256 "127ec1aafe47ff2afc13abddaf96ced366f7fbb682ff637dc072230cd32b60bc"
+      url "https://github.com/AutomationD/atun/releases/download/v0.0.0/atun-glibc-darwin-arm64.tar.gz"
+      sha256 "a9113f14f13138dd817a3dae78e1a20113d919e7686db6757fbf723750055136"
 
       def install
         bin.install "atun"
@@ -30,8 +30,8 @@ class AtunDev < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/AutomationD/atun/releases/download/v0.0.0/atun-linux-amd64.tar.gz"
-        sha256 "f56196b00ca44edce8b6fa1e4d12aa25f9cfd4228b8645b0d007e68ba430e928"
+        url "https://github.com/AutomationD/atun/releases/download/v0.0.0/atun-glibc-linux-amd64.tar.gz"
+        sha256 "e22ce2439ce9f274c57a1598af42ca80a9c926ecd786a9f81b6fe9a5f174367b"
 
         def install
           bin.install "atun"
@@ -40,8 +40,8 @@ class AtunDev < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/AutomationD/atun/releases/download/v0.0.0/atun-linux-arm64.tar.gz"
-        sha256 "746aa4497d46e61d50840af368f742e0f8af2d30b762a196f5151dfcf9c3b0a4"
+        url "https://github.com/AutomationD/atun/releases/download/v0.0.0/atun-glibc-linux-arm64.tar.gz"
+        sha256 "ab3a6375ce6e2a5345c0e376d22889dba783a32ce924fe496d09243a2ceaf231"
 
         def install
           bin.install "atun"
