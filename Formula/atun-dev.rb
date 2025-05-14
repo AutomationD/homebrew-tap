@@ -5,21 +5,21 @@
 class AtunDev < Formula
   desc "atun.io is a simple SSM/SSH tunnel manager"
   homepage "https://github.com/DimmKirr/atun"
-  version "0.0.0"
+  version "0.8.0"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/DimmKirr/atun/releases/download/v0.0.0/atun-darwin-amd64.tar.gz"
-      sha256 "fbd7ead07e9f9b9afb52f9380a2355d8d4488e7e5b1ba01efaab23f9e93b8007"
+      url "https://github.com/DimmKirr/atun/releases/download/v0.8.0/atun-darwin-amd64.tar.gz"
+      sha256 "432df5f92a2e65d11d6e52587dc9f51d0775e85846de0a2a71d37340640ad327"
 
       def install
         bin.install "atun"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/DimmKirr/atun/releases/download/v0.0.0/atun-darwin-arm64.tar.gz"
-      sha256 "d4b6266373b931c4e4603bbef0ac77bdc477ba46718cd049880ce15b20b5bc33"
+      url "https://github.com/DimmKirr/atun/releases/download/v0.8.0/atun-darwin-arm64.tar.gz"
+      sha256 "a8b935579ec81c91681031576495714dc00761a13f079371498c71867dc98354"
 
       def install
         bin.install "atun"
@@ -29,15 +29,15 @@ class AtunDev < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/DimmKirr/atun/releases/download/v0.0.0/atun-linux-amd64.tar.gz"
-      sha256 "9ed76fc26d536923316b9530dfb2b46e3ebeee9ca10c88087a9ca26edefb2d3c"
+      url "https://github.com/DimmKirr/atun/releases/download/v0.8.0/atun-linux-amd64.tar.gz"
+      sha256 "1c6d7eba52cfc3ce2f0a139480e59a7f3cbe25d7110fa05655b64be13f908e15"
       def install
         bin.install "atun"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/DimmKirr/atun/releases/download/v0.0.0/atun-linux-arm64.tar.gz"
-      sha256 "c0959510075674385a1e18634b297910eee625e5d9874af6e8c36b5c57347530"
+      url "https://github.com/DimmKirr/atun/releases/download/v0.8.0/atun-linux-arm64.tar.gz"
+      sha256 "4ff781e6e732ab390c4f4b9b63f5971fbd937c4d20b06771bc46775572d2c804"
       def install
         bin.install "atun"
       end
@@ -45,7 +45,7 @@ class AtunDev < Formula
   end
 
   conflicts_with "atun"
-  conflicts_with "atun@0.0.0"
+  conflicts_with "atun@0.8.0"
 
   test do
     system "#{bin}/atun version"
