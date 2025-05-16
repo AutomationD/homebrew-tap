@@ -5,21 +5,21 @@
 class Atun < Formula
   desc "atun.io is a simple SSM/SSH tunnel manager"
   homepage "https://github.com/DimmKirr/atun"
-  version "0.8.0"
+  version "0.8.1"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/DimmKirr/atun/releases/download/v0.8.0/atun-darwin-amd64.tar.gz"
-      sha256 "4cd69474773f10f6f985b73022eb489deb45c02dda710fa3849bb19bcf593271"
+      url "https://github.com/DimmKirr/atun/releases/download/v0.8.1/atun-darwin-amd64.tar.gz"
+      sha256 "59e7ad6e38694ea83404a32073193866e59c274c33afff6a3b9f7d93f6aca09e"
 
       def install
         bin.install "atun"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/DimmKirr/atun/releases/download/v0.8.0/atun-darwin-arm64.tar.gz"
-      sha256 "71ff0aa1917988e9adc3d1868d3d11be48360d8a7600d42106c0d2a46cf75291"
+      url "https://github.com/DimmKirr/atun/releases/download/v0.8.1/atun-darwin-arm64.tar.gz"
+      sha256 "f2652b41b44950660eb4d8891b03aaf9a99d61dd7828f31fd494ad9facbbaedf"
 
       def install
         bin.install "atun"
@@ -29,15 +29,15 @@ class Atun < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/DimmKirr/atun/releases/download/v0.8.0/atun-linux-amd64.tar.gz"
-      sha256 "78ea9e5475d5f6d2a0d2c656c3b02f6ec75d3cba8829752b6a7af3358c9c6719"
+      url "https://github.com/DimmKirr/atun/releases/download/v0.8.1/atun-linux-amd64.tar.gz"
+      sha256 "aca541d6333f581848f808eeb88c5b060afc92018a245810b6cc054896159e6b"
       def install
         bin.install "atun"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/DimmKirr/atun/releases/download/v0.8.0/atun-linux-arm64.tar.gz"
-      sha256 "f47b2fa937ac6709aa7b9e833bc57c49b3154cb3196c1430cc1ae1c1b883d811"
+      url "https://github.com/DimmKirr/atun/releases/download/v0.8.1/atun-linux-arm64.tar.gz"
+      sha256 "f459359305461775556381e33a64883aafb6af8a5d661b4e09a26a36c69158a7"
       def install
         bin.install "atun"
       end
